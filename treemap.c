@@ -65,6 +65,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     while (current != NULL) {
         parent = current;
 
+        // Si la clave ya existe, no insertamos
         if (!tree->lower_than(key, current->pair->key) &&
             !tree->lower_than(current->pair->key, key)) {
             free(newNode->pair);
@@ -85,6 +86,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     } else {
         parent->right = newNode;
     }
+
+    tree->current = newNode;
 }
 
 
