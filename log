@@ -8,3 +8,17 @@ Wed, Apr 30, 2025 10:25:40 PM:
  tests:  4|7
 total_score: 5/70
 f879cbe
+Wed, Apr 30, 2025 10:28:07 PM: 
+ treemap.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'insertTreeMap':
+treemap.c:60:16: error: unused variable 'parent' [-Werror=unused-variable]
+     TreeNode * parent = NULL;
+                ^~~~~~
+treemap.c:59:16: error: unused variable 'current' [-Werror=unused-variable]
+     TreeNode * current = tree->root;
+                ^~~~~~~
+cc1.exe: all warnings being treated as errors
+8e9f8ac
